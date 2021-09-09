@@ -1,0 +1,33 @@
+Softwares Required-
+1. Java
+2.Tomcat server
+3.XAMPP
+4.HeidiSQL
+
+Steps to complete the setUp-
+1.Download Java development kit & install it.
+2.Set the Path of Java
+	i.Go to install path of java.
+	eg- c:/ProgramFiles/java/jdk.1.8/bin
+	ii.Copy this path
+	iii.Right click on My computer
+	iv.Click on Properties
+	v.Search for Advance System Setting and click on it
+	vi.Click on Environment variable
+	vii.Select New
+	viii.Paste the path in Value & Enter OK.
+3.Download Tomcat server & install it.
+4.Download XAMPP & install it.
+5.Open XAMPP and start MYSQL.
+6.Download HeidiSQL & install it.
+7.Create username & password in HeidiSQL & then connect with port 3306.
+8.Download all the required jar files & set the classpath.
+	i.To Set the classpath, run the following command:
+	 set classpath = .;path\to\tomcat\path\lib\jarname.jar
+	 e.g. - set classpath = .;d:\tomcat\webapps\indi\WEB-INF\lib\jetty-util-9.4.8.v20171121.jar
+9. Run all the SQL scripts in HeidiSQL to create the database
+10.Create java file & compile it to create the REST API.
+11.Create web.xml in WEB-INF folder for mapping the url.
+12.Start Tomcat Service and check the response of API.
+13.Create HTML File , CSS File & JavaScript File for displaying the API response.
+14.Open the HTML File to check the working of project.

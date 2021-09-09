@@ -1,0 +1,56 @@
+1.create the database on HeidiSQL :-
+                  - create the database 'library'.
+				  - create two tables named books & author in database 'library'.
+				  - Books table attributes:- bookid(primary key), book name, published date, genre, Rating, AuthorID(foreign key).
+				  - Author table attributes:- id(primary key), author name, birth date, birth place, email.
+				  - Fill these two tables with data using insert queries.
+				  
+2.Create java file named as BookServlet.java:-
+                  - Register the driver class:- The forName() method of Class class is used to register the driver class.
+				  - Create the connection object:- The getConnection() method of DriverManager class is used to establish connection with the database.
+				  - Create the PreparedStatement object:- The prepareStatement() method of Connection interface is used to create statement.
+				  - Execute the query:- The executeQuery() method of PreparedStatement interface is used to execute queries to the database.
+										Store the response of this method in ResultSet object.
+				  - Get the records:-
+				   i. Traverse all the records from ResultSet object using next() method
+				   ii. create a json of all the records.
+				   iii. Return the created json as the API Response.
+				  - Close the connection object:- By closing connection object statement and ResultSet will be closed automatically.
+3. Create xml file named as web.xml to map our servlet to a URL:
+				  - Create servlet and its mapping
+                  - In servlet tag,write servlet name & servlet class.
+				  - In servelet-mapping tag, create url pattern of servlet name.
+				  - Write filter to allow GET method to call our API from interface
+				  - In filter, create cross-origin filter name & org.eclipse.jetty.servlets.CrossOriginFilter filter-class.
+				  - Specify the params & create param name & its value.
+				  
+4. Create HTML file named as index.html:
+                  - Give title to html web page.
+				  - Link bootstrap cdn to create a responsive web.
+				  - Create table for showing database attributes on browser:-
+				             i. bookid
+				             ii. book name
+							 iii. Published date
+							 iv. Genre
+							 v. Rating
+							 vi. Author Name
+							 vii. Birth name
+							 viii. Birth place
+							 ix. EmailID
+				    
+5. Create CSS file named as index.css:
+                  - Link css file in html file.
+				  - Give font size & background-color to body.
+				  - Give line height to table created.
+				  
+6. Create JavaScript file named as index.js:
+                  - Link js file in html file.
+				  - Make a function loadTable to fetch the response data.
+				  - Specify API url from where we want to fetch the data in this function.
+				  - keep the method as GET.				   
+				  - Code the necessary requirements to obtain the table attributes data from database.
+
+
+Done.......				  
+Let's Enjoy Author's Treasure.
+				  

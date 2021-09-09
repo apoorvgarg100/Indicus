@@ -1,0 +1,12 @@
+create database library;
+use library;
+create table author(id int(10) AUTO_INCREMENT,authorName varchar(40),birthDate date,birthPlace varchar(40),emailId varchar(50),PRIMARY KEY(id));
+create table books(bookId int(10) AUTO_INCREMENT,bookName varchar(40),publishDate date,genre varchar(40),bookRating float(3),authorId int(10),PRIMARY KEY(bookId),FOREIGN KEY(authorId) REFERENCES author(id));
+insert into author(authorName,birthDate,birthPlace,emailId) values('Margaret Atwood','1939-11-18','Ottawa, Canada','margaret27@gmail.com');
+insert into author(authorName,birthDate,birthPlace,emailId) values('Vasdev Mohi','1944-03-02','Mirpur Khas, Pakistan','mohivas87@gmail.com');
+insert into author(authorName,birthDate,birthPlace,emailId) values('PM Narendra Modi','1950-09-17','Vadnagar, India','modi23@gmail.com');
+insert into author(authorName,birthDate,birthPlace,emailId) values('Richard Powers','1957-06-18','Evanston, United States','powersrich65@gmail.com');
+insert into books(bookName,publishDate,genre,bookRating,authorId) values('The Testaments','2019-09-10','Science fiction','4.2','1');
+insert into books(bookName,publishDate,genre,bookRating,authorId) values('Cheque book','2016-01-01','Science fiction','4.4','2');
+insert into books(bookName,publishDate,genre,bookRating,authorId) values('The Braille edition of the book Exam Warriors','2018-09-10','Academic genre','4.5','3');
+insert into books(bookName,publishDate,genre,bookRating,authorId) values('The Overstory','2018-04-03','Environmental fiction','4.3','4');
